@@ -26,19 +26,19 @@ public class KnickerbockerTest {
     @Test
     public void firstTest() throws InterruptedException{
         KnickerbockerNewYorkPage knickerbockerNewYorkPage = new KnickerbockerNewYorkPage(driver);
-        driver.findElement(knickerbockerNewYorkPage.overview).click();
+        driver.findElement(KnickerbockerNewYorkPage.OVERVIEW).click();
         sleep(1000);
-        knickerbockerNewYorkPage.makeScreenshot("Screenshot overview");
-        driver.findElement(knickerbockerNewYorkPage.facilities).click();
-        knickerbockerNewYorkPage.makeScreenshot("Screenshot facilities");
-        driver.findElement(knickerbockerNewYorkPage.rooms).click();
-        knickerbockerNewYorkPage.makeScreenshot("Screenshot rooms");
-        driver.findElement(knickerbockerNewYorkPage.location).click();
+        knickerbockerNewYorkPage.makeScreenshot("Screenshot OVERVIEW");
+        driver.findElement(KnickerbockerNewYorkPage.FACILITIES).click();
+        knickerbockerNewYorkPage.makeScreenshot("Screenshot FACILITIES");
+        driver.findElement(KnickerbockerNewYorkPage.ROOMS).click();
+        knickerbockerNewYorkPage.makeScreenshot("Screenshot ROOMS");
+        driver.findElement(KnickerbockerNewYorkPage.LOCATION).click();
         sleep(2000);
-        knickerbockerNewYorkPage.makeScreenshot("Screenshot location");
-        driver.findElement(knickerbockerNewYorkPage.reviews).click();
+        knickerbockerNewYorkPage.makeScreenshot("Screenshot LOCATION");
+        driver.findElement(KnickerbockerNewYorkPage.REVIEWS).click();
         sleep(2000);
-        knickerbockerNewYorkPage.makeScreenshot("Screenshot reviews");
+        knickerbockerNewYorkPage.makeScreenshot("Screenshot REVIEWS");
         knickerbockerNewYorkPage.setCheckIn();
         knickerbockerNewYorkPage.setDate("Январь", "2019", "24");
         knickerbockerNewYorkPage.setDate("Январь", "2019", "25");
@@ -49,17 +49,17 @@ public class KnickerbockerTest {
         knickerbockerNewYorkPage.addChild();
         knickerbockerNewYorkPage.fillAgeOfChild(1, "2");
         knickerbockerNewYorkPage.fillAgeOfChild(2, "10");
-        Assert.assertEquals("verify number of guests", "5", driver.findElement(knickerbockerNewYorkPage.numberGuests).getText());
-        Assert.assertEquals("verify number of rooms", "1", driver.findElement(knickerbockerNewYorkPage.numberRooms).getText());
-        knickerbockerNewYorkPage. viewPrices();
+        Assert.assertEquals("verify amount of guests", "5", driver.findElement(KnickerbockerNewYorkPage.AMOUNT_GUESTS).getText());
+        Assert.assertEquals("verify amount of rooms", "1", driver.findElement(KnickerbockerNewYorkPage.AMOUNT_ROOMS).getText());
+        knickerbockerNewYorkPage.viewPrices();
         sleep(5000);
         knickerbockerNewYorkPage.switchTab(2);
         knickerbockerNewYorkPage.selectBookingRoom();
         sleep(8000);
         knickerbockerNewYorkPage.makeScreenshot("Booking page");
-        Assert.assertEquals("verify date of check in", "2019-01-24", driver.findElement(knickerbockerNewYorkPage.dateChechIn).getText());
-        Assert.assertEquals("verify date of check out", "2019-01-25", driver.findElement(knickerbockerNewYorkPage.dateCheckOut).getText());
-        Assert.assertEquals("verify count of guests", "3 Взрослых,\n" + "2 Детей", driver.findElement(knickerbockerNewYorkPage.countGuests).getText());
+        Assert.assertEquals("verify date of check in", "2019-01-24", driver.findElement(KnickerbockerNewYorkPage.DATE_CHECK_IN).getText());
+        Assert.assertEquals("verify date of check out", "2019-01-25", driver.findElement(KnickerbockerNewYorkPage.DATE_CHECK_OUT).getText());
+        Assert.assertEquals("verify count of guests", "3 Взрослых,\n" + "2 Детей", driver.findElement(KnickerbockerNewYorkPage.COUNT_GUESTS).getText());
     }
 
     @After

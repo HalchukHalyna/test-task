@@ -17,30 +17,28 @@ public class KnickerbockerNewYorkPage {
         this.driver = driver;
     }
 
-    public By overview = By.xpath("//*[@id=\"container\"]/div/div/div/div[4]/ul/li[1]/a");
-    public By facilities = By.xpath("//*[@id=\"container\"]/div/div/div/div[5]/div[3]/div[1]/div/div/ul/li[2]/a");
-    public By rooms = By.xpath("//*[@id=\"container\"]/div/div/div/div[5]/div[3]/div[1]/div/div/ul/li[3]/a");
-    public By location = By.xpath("//*[@id=\"container\"]/div/div/div/div[5]/div[3]/div[1]/div/div/ul/li[4]/a");
-    public By reviews = By.xpath("//*[@id=\"container\"]/div/div/div/div[5]/div[3]/div[1]/div/div/ul/li[5]/a");
+    public static final By OVERVIEW = By.xpath("//*[@id=\"container\"]/div/div/div/div[4]/ul/li[1]/a");
+    public static final By FACILITIES = By.xpath("//*[@id=\"container\"]/div/div/div/div[5]/div[3]/div[1]/div/div/ul/li[2]/a");
+    public static final By ROOMS = By.xpath("//*[@id=\"container\"]/div/div/div/div[5]/div[3]/div[1]/div/div/ul/li[3]/a");
+    public static final By LOCATION = By.xpath("//*[@id=\"container\"]/div/div/div/div[5]/div[3]/div[1]/div/div/ul/li[4]/a");
+    public static final By REVIEWS = By.xpath("//*[@id=\"container\"]/div/div/div/div[5]/div[3]/div[1]/div/div/ul/li[5]/a");
+    public static final By AMOUNT_GUESTS = By.xpath("//*[@id=\"container\"]/div/div/div/div[5]/div[3]/div[2]/div/form/div[1]/div[3]/div[3]/div[1]/span[1]");
+    public static final By AMOUNT_ROOMS = By.xpath("//*[@id=\"container\"]/div/div/div/div[5]/div[3]/div[2]/div/form/div[1]/div[3]/div[3]/div[1]/span[2]/span[2]");
+    public static final By DATE_CHECK_IN = By.xpath("//*[@id=\"container\"]/div[3]/div[1]/div[1]/div[3]/div[1]/div[1]/span[2]");
+    public static final By DATE_CHECK_OUT = By.xpath("//*[@id=\"container\"]/div[3]/div[1]/div[1]/div[3]/div[1]/div[2]/span[2]");
+    public static final By COUNT_GUESTS = By.xpath("//*[@id=\"container\"]/div[3]/div[1]/div[1]/div[3]/div[2]/div[1]/span[2]");
 
-    private By checkIn = By.xpath("//*[@id=\"container\"]/div/div/div/div[5]/div[3]/div[2]/div/form/div[1]/div[3]/div[1]/div/span/span[3]");
-    private By checkOut = By.xpath("//*[@id=\"container\"]/div/div/div/div[5]/div[3]/div[2]/div/form/div[1]/div[3]/div[2]/div/span/span[3]");
-    private By nextMonth = By.xpath("//*[@id=\"container\"]/div/div/div/div[5]/div[3]/div[2]/div/form/div[2]/div[2]/table[2]/thead/tr[1]/th[3]/span");
-    private By month = By.xpath("//*[@id=\"container\"]/div/div/div/div[5]/div[3]/div[2]/div/form/div[2]/div[2]/table[1]/thead/tr[1]/th[2]/div[1]");
-    private By year = By.xpath("//*[@id=\"container\"]/div/div/div/div[5]/div[3]/div[2]/div/form/div[2]/div[2]/table[1]/thead/tr[1]/th[2]/div[2]");
-    private By days = By.xpath("//*[@id=\"container\"]/div/div/div/div[5]/div[3]/div[2]/div/form/div[2]/div[2]/table[1]/tbody");
-    private By roomsAndGuests = By.xpath("//*[@id=\"container\"]/div/div/div/div[5]/div[3]/div[2]/div/form/div[1]/div[3]/div[3]/div[1]/span[2]");
-    private By incrAdult = By.xpath("//*[@id=\"container\"]/div/div/div/div[5]/div[3]/div[2]/div/form/div[1]/div[3]/div[3]/div[2]/div/div[1]/div/div[2]/div[1]/div[1]/div[2]/div[3]");
-    private By incrChild = By.xpath("//*[@id=\"container\"]/div/div/div/div[5]/div[3]/div[2]/div/form/div[1]/div[3]/div[3]/div[2]/div/div[1]/div/div[2]/div[1]/div[2]/div[2]/div[3]");
-    private By ageOfAnyChild = By.xpath("//*[@id=\"container\"]/div/div/div/div[5]/div[3]/div[2]/div/form/div[1]/div[3]/div[3]/div[2]/div/div[1]/div/div[2]/div[2]/div[2]");
-    private By pricesBtn = By.xpath("//*[@id=\"container\"]/div/div/div/div[5]/div[3]/div[2]/div/form/div[1]/div[2]/div/div[2]/button[1]");
-    private By bookingRoomBtn = By.xpath("//*[@id=\"hotel-608662\"]/div[3]/div[2]/div/div/div/div[2]/div[2]/div[4]/button");
-
-    public By numberGuests = By.xpath("//*[@id=\"container\"]/div/div/div/div[5]/div[3]/div[2]/div/form/div[1]/div[3]/div[3]/div[1]/span[1]");
-    public By numberRooms = By.xpath("//*[@id=\"container\"]/div/div/div/div[5]/div[3]/div[2]/div/form/div[1]/div[3]/div[3]/div[1]/span[2]/span[2]");
-    public By dateChechIn = By.xpath("//*[@id=\"container\"]/div[3]/div[1]/div[1]/div[3]/div[1]/div[1]/span[2]");
-    public By dateCheckOut = By.xpath("//*[@id=\"container\"]/div[3]/div[1]/div[1]/div[3]/div[1]/div[2]/span[2]");
-    public By countGuests = By.xpath("//*[@id=\"container\"]/div[3]/div[1]/div[1]/div[3]/div[2]/div[1]/span[2]");
+    private static final By CHECK_IN = By.xpath("//*[@id=\"container\"]/div/div/div/div[5]/div[3]/div[2]/div/form/div[1]/div[3]/div[1]/div/span/span[3]");
+    private static final By NEXT_MONTH = By.xpath("//*[@id=\"container\"]/div/div/div/div[5]/div[3]/div[2]/div/form/div[2]/div[2]/table[2]/thead/tr[1]/th[3]/span");
+    private static final By MONTH = By.xpath("//*[@id=\"container\"]/div/div/div/div[5]/div[3]/div[2]/div/form/div[2]/div[2]/table[1]/thead/tr[1]/th[2]/div[1]");
+    private static final By YEAR = By.xpath("//*[@id=\"container\"]/div/div/div/div[5]/div[3]/div[2]/div/form/div[2]/div[2]/table[1]/thead/tr[1]/th[2]/div[2]");
+    private static final By DAYS = By.xpath("//*[@id=\"container\"]/div/div/div/div[5]/div[3]/div[2]/div/form/div[2]/div[2]/table[1]/tbody");
+    private static final By ROOMS_AND_GUESTS = By.xpath("//*[@id=\"container\"]/div/div/div/div[5]/div[3]/div[2]/div/form/div[1]/div[3]/div[3]/div[1]/span[2]");
+    private static final By INCREMENT_ADULT = By.xpath("//*[@id=\"container\"]/div/div/div/div[5]/div[3]/div[2]/div/form/div[1]/div[3]/div[3]/div[2]/div/div[1]/div/div[2]/div[1]/div[1]/div[2]/div[3]");
+    private static final By INCREMENT_CHILD = By.xpath("//*[@id=\"container\"]/div/div/div/div[5]/div[3]/div[2]/div/form/div[1]/div[3]/div[3]/div[2]/div/div[1]/div/div[2]/div[1]/div[2]/div[2]/div[3]");
+    private static final By AGE_OF_ANY_CHILD = By.xpath("//*[@id=\"container\"]/div/div/div/div[5]/div[3]/div[2]/div/form/div[1]/div[3]/div[3]/div[2]/div/div[1]/div/div[2]/div[2]/div[2]");
+    private static final By PRICES_BTN = By.xpath("//*[@id=\"container\"]/div/div/div/div[5]/div[3]/div[2]/div/form/div[1]/div[2]/div/div[2]/button[1]");
+    private static final By BOOKING_OF_ROOM_BTN = By.xpath("//*[@id=\"hotel-608662\"]/div[3]/div[2]/div/div/div/div[2]/div[2]/div[4]/button");
 
     public void makeScreenshot(String eventName) throws InterruptedException {
         File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
@@ -53,16 +51,13 @@ public class KnickerbockerNewYorkPage {
         }
     }
     public void setCheckIn(){
-        driver.findElement(checkIn).click();
-    }
-    public void setCheckOut(){
-        driver.findElement(checkOut).click();
+        driver.findElement(CHECK_IN).click();
     }
     public void setDate(String searchMonth, String searchYear, String searchDay) {
-        while (!driver.findElement(month).getText().equals(searchMonth) && !driver.findElement(year).getText().equals(searchYear)){
-            driver.findElement(nextMonth).click();
+        while (!driver.findElement(MONTH).getText().equals(searchMonth) && !driver.findElement(YEAR).getText().equals(searchYear)){
+            driver.findElement(NEXT_MONTH).click();
         }
-        List<WebElement> columns = driver.findElement(days).findElements(By.tagName("td"));
+        List<WebElement> columns = driver.findElement(DAYS).findElements(By.tagName("td"));
         for (WebElement cell: columns) {
             if (cell.getText().equals(searchDay)) {
                 cell.click();
@@ -76,29 +71,29 @@ public class KnickerbockerNewYorkPage {
         }
     }
     public void openRoomsAndGuests(){
-        driver.findElement(roomsAndGuests).click();
+        driver.findElement(ROOMS_AND_GUESTS).click();
     }
     public void addAdult(){
-        driver.findElement(incrAdult).click();
+        driver.findElement(INCREMENT_ADULT).click();
     }
     public void addChild(){
-        driver.findElement(incrChild).click();
+        driver.findElement(INCREMENT_CHILD).click();
     }
     public void fillAgeOfChild(int numberOfChild, String ageOfChild){
-        Select ageSelect = new Select(driver.findElement(ageOfAnyChild).findElements(By.tagName("select")).get(numberOfChild - 1));
+        Select ageSelect = new Select(driver.findElement(AGE_OF_ANY_CHILD).findElements(By.tagName("select")).get(numberOfChild - 1));
         ageSelect.selectByValue(ageOfChild);
     }
     public void viewPrices(){
-        driver.findElement(pricesBtn).click();
+        driver.findElement(PRICES_BTN).click();
     }
     public void selectBookingRoom(){
         if(driver.findElement(By.xpath("//*[@id=\"hotel-608662\"]/div[3]/div[2]/div/div/div/div")).isDisplayed()){
-            driver.findElement(bookingRoomBtn).click();
+            driver.findElement(BOOKING_OF_ROOM_BTN).click();
         }
     }
     public void switchTab(int numberOfTab) throws InterruptedException {
         Thread.sleep(2000);
-        ArrayList<String> tabs = new ArrayList<String> (driver.getWindowHandles());
+        List<String> tabs = new ArrayList<String> (driver.getWindowHandles());
         driver.switchTo().window(tabs.get(numberOfTab-1));
         Thread.sleep(2000);
     }
